@@ -22,7 +22,7 @@ body {
 .task,
 .task-text {
   width: 56%;
-  flex-grow: 1
+  flex-grow: 1;
 }
 .task-row-wrapper {
   display: flex;
@@ -91,7 +91,7 @@ button {
 }
 .task,
 .task-text {
-  width: 226px
+  width: 226px;
 }
 .delete img {
   height: 2em;
@@ -110,10 +110,10 @@ button {
 /* Edit Task */
 .task-container .task-text,
 .edit-mode label {
-  display:none
+  display: none;
 }
 .edit-mode .task-text {
-  display:inline-block;
+  display: inline-block;
 }
 
 @media (max-width:768px) {
@@ -121,4 +121,5 @@ button {
     .header {
       text-align: center;
     }
+
   }

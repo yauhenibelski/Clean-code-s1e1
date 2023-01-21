@@ -15,7 +15,7 @@ var completedTasksHolder = document.getElementById( "completed-tasks" ); //compl
 
 
 //New task list item
-var createNewTaskElement = function(taskString){
+var createNewTaskElement = function (taskString) {
 
     var listItem = document.createElement("li");
 
@@ -45,18 +45,18 @@ var createNewTaskElement = function(taskString){
 
     deleteButton.className = "delete";
     deleteButtonImg.src = './remove.svg';
-    deleteButton.appendChild(deleteButtonImg) ;
+    deleteButton.appendChild(deleteButtonImg);
 
 
     //and appending.
-    listItem.appendChild( checkBox ) ;
+    listItem.appendChild( checkBox );
     listItem.appendChild( label );
     listItem.appendChild( editInput );
     listItem.appendChild( editButton );
     listItem.appendChild( deleteButton );
 
     return listItem;
-}
+};
 
 
 var addTask = function () {
@@ -74,7 +74,7 @@ var addTask = function () {
 
     taskInput.value = "";
 
-}
+};
 
 //Edit an existing task.
 
@@ -101,7 +101,7 @@ var editTask = function () {
     }else{
         editInput.value = label.innerText;
         editBtn.innerText = "Save";
-    }
+    };
 
     //toggle .edit-mode on the parent.
     listItem.classList.toggle("edit-mode");
@@ -118,7 +118,7 @@ var deleteTask = function () {
     //Remove the parent list item from the ul.
     ul.removeChild(listItem);
 
-}
+};
 
 
 //Mark task completed
@@ -131,7 +131,7 @@ var taskCompleted = function () {
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 
-}
+};
 
 
 var taskIncomplete = function () {
@@ -145,14 +145,14 @@ var taskIncomplete = function () {
 
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem,taskCompleted);
-}
+};
 
 
 
 var ajaxRequest = function () {
 
     console.log("AJAX Request");
-}
+};
 
 //The glue to hold it all together.
 
@@ -187,7 +187,7 @@ for (var i = 0; i < incompleteTaskHolder.children.length; i++ ) {
 
     //bind events to list items chldren(tasksCompleted)
     bindTaskEvents(incompleteTaskHolder.children[i],taskCompleted);
-}
+};
 
 
 
@@ -198,7 +198,7 @@ for (var i = 0; i < completedTasksHolder.children.length; i++ ) {
     //bind events to list items chldren(tasksIncompleted)
 
     bindTaskEvents( completedTasksHolder.children[i],taskIncomplete );
-}
+};
 
 // Issues with usability don't get seen until they are in front of a human tester.
 
