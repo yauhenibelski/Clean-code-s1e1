@@ -24,7 +24,7 @@ body {
   width: 56%;
   flex-grow: 1;
 }
-.task-row-wrapper {
+.task-row__wrapper {
   display: flex;
 }
 .task-container {
